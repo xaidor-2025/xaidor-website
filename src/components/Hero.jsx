@@ -4,19 +4,19 @@ export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50"></div>
 
       {/* Fixed background icons */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <Brain className="absolute top-10 left-20 w-14 h-14 text-[#F4706B] animate-float-1" />
-        <Cpu className="absolute top-40 left-1/3 w-10 h-10 text-pink-400 animate-float-2" />
-        <Bot className="absolute bottom-32 left-24 w-16 h-16 text-red-400 animate-float-3" />
-        <CircuitBoard className="absolute top-1/4 right-20 w-12 h-12 text-[#EC5D50] animate-float-2" />
-        <Atom className="absolute bottom-20 right-40 w-14 h-14 text-pink-500 animate-float-1" />
-        <Cpu className="absolute top-1/2 left-1/4 w-12 h-12 text-[#F89894] animate-float-3" />
-        <Brain className="absolute bottom-10 left-1/2 w-10 h-10 text-red-300 animate-float-2" />
-        <Bot className="absolute top-16 right-1/3 w-12 h-12 text-pink-400 animate-float-1" />
-        <CircuitBoard className="absolute bottom-1/3 right-10 w-14 h-14 text-[#F4706B] animate-float-3" />
+        <Brain className="absolute top-10 left-4 sm:left-20 w-8 h-8 sm:w-14 sm:h-14 text-[#F4706B] animate-float-1" />
+        <Cpu className="absolute top-40 left-1/3 w-6 h-6 sm:w-10 sm:h-10 text-pink-400 animate-float-2" />
+        <Bot className="absolute bottom-32 left-6 sm:left-24 w-10 h-10 sm:w-16 sm:h-16 text-red-400 animate-float-3" />
+        <CircuitBoard className="absolute top-1/4 right-4 sm:right-20 w-8 h-8 sm:w-12 sm:h-12 text-[#EC5D50] animate-float-2" />
+        <Atom className="absolute bottom-20 right-8 sm:right-40 w-8 h-8 sm:w-14 sm:h-14 text-pink-500 animate-float-1" />
+        <Cpu className="absolute top-1/2 left-1/4 w-8 h-8 sm:w-12 sm:h-12 text-[#F89894] animate-float-3" />
+        <Brain className="absolute bottom-10 left-1/2 w-6 h-6 sm:w-10 sm:h-10 text-red-300 animate-float-2" />
+        <Bot className="absolute top-16 right-1/3 w-8 h-8 sm:w-12 sm:h-12 text-pink-400 animate-float-1" />
+        <CircuitBoard className="absolute bottom-1/3 right-2 sm:right-10 w-8 h-8 sm:w-14 sm:h-14 text-[#F4706B] animate-float-3" />
       </div>
 
       {/* Content */}
@@ -46,7 +46,7 @@ export default function Hero() {
               </a>
               <a
                 href="#programs"
-                className="border-2 border-[#EC5D50] text-[#EC5D50] px-8 py-3 rounded-lg hover:bg-orange-50 font-medium"
+                className="border-2 border-[#EC5D50] text-[#EC5D50] px-8 py-3 rounded-lg hover:bg-[#FEF3F2] font-medium"
               >
                 View Programs
               </a>

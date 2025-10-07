@@ -51,7 +51,7 @@ const RegisterForm = () => {
   return (
     <section
       id="register"
-      className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50"
+      className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

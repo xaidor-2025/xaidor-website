@@ -36,7 +36,7 @@ const programs = [
 ]
 const Programs = () => {
     return (
-        <section id="programs" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
+        <section id="programs" className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Program</h2>
@@ -66,7 +66,7 @@ const Programs = () => {
                             </div>
                             </div>
                             <div className="text-4xl font-bold mb-6 text-[#EC5D50]">{program.price}</div>
-                            <a href="#register" className={`block w-full py-3 rounded-lg font-medium text-center transition-colors ${program.popular ? 'bg-[#EC5D50] text-white hover:bg-[#E04336]' : 'border-2 border-[#EC5D50] text-[#EC5D50] hover:bg-orange-50'}`}>
+                            <a href="#register" className={`block w-full py-3 rounded-lg font-medium text-center transition-colors ${program.popular ? 'bg-[#EC5D50] text-white hover:bg-[#E04336]' : 'border-2 border-[#EC5D50] text-[#EC5D50] hover:bg-[#FEF3F2]'}`}>
                                 Enroll Now
                             </a>
                         </div>

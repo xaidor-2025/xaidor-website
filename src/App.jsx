@@ -1,4 +1,4 @@
-import Home from './paages/Home';
+import Home from './pages/Home';
 
 export default function XaidorWebsite() {
 

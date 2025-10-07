@@ -20,7 +20,7 @@ export default function Features() {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                     {features.map((feature, idx) => (
-                        <div key={idx} className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                        <div key={idx} className="bg-gradient-to-br from-[#FEF3F2] to-pink-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                             <feature.icon className="w-12 h-12 mx-auto mb-3 text-[#EC5D50]" strokeWidth={1.5} />
                             <p className="text-sm font-medium text-gray-700">{feature.text}</p>
                         </div>
