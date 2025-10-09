@@ -1,12 +1,19 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Brain, Cpu, Bot, CircuitBoard, Atom, BotIcon } from "lucide-react";
 
 export default function Hero() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50"></div>
 
-      {/* Fixed background icons */}
+      {/* Floating background icons */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <Brain className="absolute top-10 left-4 sm:left-20 w-8 h-8 sm:w-14 sm:h-14 text-[#F4706B] animate-float-1" />
         <Cpu className="absolute top-40 left-1/3 w-6 h-6 sm:w-10 sm:h-10 text-pink-400 animate-float-2" />
@@ -22,8 +29,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left */}
-          <div className="relative z-10">
+
+          {/* Left Section */}
+          <div data-aos="fade-right" className="relative z-10">
             <div className="inline-block mb-4">
               <span className="bg-[#FDE8E6] text-[#E04336] px-4 py-2 border border-[#FAC0BD] rounded-full text-lg font-medium">
                 Kerala's Most Affordable
@@ -40,13 +48,13 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#register"
-                className="bg-[#EC5D50] text-white px-8 py-3 rounded-lg hover:bg-[#E04336] font-medium"
+                className="bg-[#EC5D50] text-white px-8 py-3 rounded-lg hover:bg-[#E04336] font-medium transition"
               >
                 Enroll Now
               </a>
               <a
                 href="#programs"
-                className="border-2 border-[#EC5D50] text-[#EC5D50] px-8 py-3 rounded-lg hover:bg-[#FEF3F2] font-medium"
+                className="border-2 border-[#EC5D50] text-[#EC5D50] px-8 py-3 rounded-lg hover:bg-[#FEF3F2] font-medium transition"
               >
                 View Programs
               </a>
@@ -54,15 +62,12 @@ export default function Hero() {
           </div>
 
           {/* Right big image */}
-          <div className="relative flex justify-center z-10">
+          <div data-aos="zoom-in" className="relative flex justify-center z-10">
             <div className="relative">
-              {/* Main central icon with glow */}
               <div className="relative bg-white rounded-3xl p-12 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FAC0BD] to-pink-300 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
                 <BotIcon className="relative w-48 h-48 text-[#EC5D50]" strokeWidth={1.5} />
               </div>
-              
-              {/* Orbiting icons */}
               <div className="absolute top-0 left-0 w-full h-full">
                 <Brain className="absolute -top-6 -right-6 w-16 h-16 text-pink-500 bg-white rounded-2xl p-3 shadow-xl animate-float-1" />
                 <Cpu className="absolute -bottom-6 -left-6 w-16 h-16 text-[#EC5D50] bg-white rounded-2xl p-3 shadow-xl animate-float-2" />
@@ -70,6 +75,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,26 +1,44 @@
-import { Users, HandCoins, TvMinimalPlay, FolderOpenDot, MessagesSquare, Building2 } from 'lucide-react'
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Users, HandCoins, TvMinimalPlay, FolderOpenDot, MessagesSquare, Building2 } from "lucide-react";
 
 const features = [
     { icon: Users, text: "25 Students Per Batch" },
     { icon: HandCoins, text: "Affordable Pricing" },
     { icon: TvMinimalPlay, text: "Live Sessions" },
-    { icon: FolderOpenDot, text: "15+ Practical Projets" },
+    { icon: FolderOpenDot, text: "15+ Practical Projects" },
     { icon: MessagesSquare, text: "Doubt Clearing Sessions" },
     { icon: Building2, text: "Premium Faculties" },
-]
+];
 
 export default function Features() {
-    return (
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // animation duration in ms
+            once: true,    // animation happens only once
+            easing: "ease-out-cubic",
+        });
+    }, []);
 
+    return (
         <section id="features" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
+                <div className="text-center mb-12" data-aos="fade-up">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Xaidor?</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">Industry-leading features designed for your success</p>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Industry-leading features designed for your success
+                    </p>
                 </div>
+
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                     {features.map((feature, idx) => (
-                        <div key={idx} className="bg-gradient-to-br from-[#FEF3F2] to-pink-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                        <div
+                            key={idx}
+                            data-aos="fade-up"
+                            data-aos-delay={idx * 100} // adds a small stagger effect
+                            className="bg-gradient-to-br from-[#FEF3F2] to-pink-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                        >
                             <feature.icon className="w-12 h-12 mx-auto mb-3 text-[#EC5D50]" strokeWidth={1.5} />
                             <p className="text-sm font-medium text-gray-700">{feature.text}</p>
                         </div>
@@ -28,5 +46,5 @@ export default function Features() {
                 </div>
             </div>
         </section>
-    )
+    );
 }

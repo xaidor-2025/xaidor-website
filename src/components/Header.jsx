@@ -7,7 +7,7 @@ const Header = ({mobileMenuOpen, setMobileMenuOpen}) => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='text-2xl font-bold text-[#171F3D]'>
-            <img src='./assets/logo-full-png.png' className='w-45'/>
+            <img draggable='false' src='./assets/logo-full-png.png' onClick={() => window.location.reload()} className='w-45 cursor-pointer select-none'/>
           </div>
           <div className='hidden md:flex space-x-8 text-sm font-medium'>
             <a href="#" className='hover:text-[#EC5D50]'>Home</a>

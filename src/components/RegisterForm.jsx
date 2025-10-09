@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -11,40 +13,31 @@ const RegisterForm = () => {
     message: '',
   });
 
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const handleInputChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS credentials
-    const serviceId = "service_s9adr4m";
-    const adminTemplateId = "template_cdwpqzt"; // For you (admin)
-    const userTemplateId = "template_rjqo3bk";   // For auto-reply
-    const publicKey = "8ahPY87__bsvVBBU8";
+    const serviceId = 'service_4f4p2ff';
+    const adminTemplateId = 'template_cdwpqzt';
+    const userTemplateId = 'template_rjqo3bk';
+    const publicKey = 'RXIk04ZjV5E4GEWxf';
 
-    // First: Send email to Admin
     emailjs
       .send(serviceId, adminTemplateId, formData, publicKey)
+      .then(() => emailjs.send(serviceId, userTemplateId, formData, publicKey))
       .then(() => {
-        console.log("✅ Admin email sent");
-
-        // Second: Auto-reply to user
-        return emailjs.send(serviceId, userTemplateId, formData, publicKey);
-      })
-      .then(() => {
-        alert("🎉 Thank you for registering! A confirmation email has been sent to you.");
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          program: '',
-          message: '',
-        });
+        alert('🎉 Thank you for registering! A confirmation email has been sent to you.');
+        setFormData({ name: '', email: '', phone: '', program: '', message: '' });
       })
       .catch((error) => {
-        console.error("❌ Error sending email:", error);
-        alert("Something went wrong, please try again.");
+        console.error('❌ Error sending email:', error);
+        alert('Something went wrong, please try again.');
       });
   };
 
@@ -53,8 +46,11 @@ const RegisterForm = () => {
       id="register"
       className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50"
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+      <div
+        className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+      >
+        <div className="text-center mb-12" data-aos="fade-down">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Register Now
           </h2>
@@ -62,9 +58,11 @@ const RegisterForm = () => {
             Start your AI journey today. Fill out the form below and we'll get in touch.
           </p>
         </div>
+
         <form
           onSubmit={handleSubmit}
           className="bg-white rounded-2xl shadow-xl p-8 md:p-12 space-y-6"
+          data-aos="zoom-in-up"
         >
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -92,7 +90,7 @@ const RegisterForm = () => {
               onChange={handleInputChange}
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EC5D50] focus:border-transparent outline-none transition-all"
-              placeholder="your.email@example.com"
+              placeholder="youremail@example.com"
             />
           </div>
 
@@ -121,6 +119,9 @@ const RegisterForm = () => {
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EC5D50] focus:border-transparent outline-none transition-all bg-white"
             >
+              <option value="" disabled>
+                Select a program...
+              </option>
               <option value="Agentic AI Engineer Program (₹14,999)">
                 Agentic AI Engineer Program (₹14,999)
               </option>
@@ -146,7 +147,7 @@ const RegisterForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#EC5D50] text-white py-4 rounded-lg font-semibold hover:bg-[#E04336] transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            className="w-full bg-[#EC5D50] cursor-pointer text-white py-4 rounded-lg font-semibold hover:bg-[#E04336] transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
           >
             Submit Registration
             <Send size={20} />
