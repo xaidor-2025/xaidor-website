@@ -7,7 +7,7 @@ const features = [
     { icon: Users, text: "Small Batch Size" },
     { icon: HandCoins, text: "Affordable Pricing" },
     { icon: TvMinimalPlay, text: "Live Sessions" },
-    { icon: FolderOpenDot, text: "15+ Practical Projects" },
+    { icon: FolderOpenDot, text: "Real World Projects" },
     { icon: MessagesSquare, text: "Doubt Clearing Sessions" },
     { icon: Building2, text: "Premium Faculties" },
 ];
