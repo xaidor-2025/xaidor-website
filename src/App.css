@@ -31,3 +31,11 @@
 .animate-float-main {
   animation: floatMain 7s ease-in-out infinite;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

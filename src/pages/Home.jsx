@@ -8,6 +8,9 @@ import RegisterForm from '../components/RegisterForm'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Features from '../components/Features';
+import TrendingCourses from '../components/TrendingCourses'
+import Certifications from '../components/Certifications'
+import PDFViewer from '../components/PdfViewer'
 
 
 export default function Home() {
@@ -70,12 +73,15 @@ export default function Home() {
       </div>
 
       <Hero />
+      <Certifications />
       <Features />
-      <Programs />
+      <TrendingCourses />
+      {/* <Programs /> */}
       <About />
       <RegisterForm />
       <Contact />
       <Footer />
+      <PDFViewer />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { Users, HandCoins, TvMinimalPlay, FolderOpenDot, MessagesSquare, Building2 } from "lucide-react";
 
 const features = [
-    { icon: Users, text: "25 Students Per Batch" },
+    { icon: Users, text: "Small Batch Size" },
     { icon: HandCoins, text: "Affordable Pricing" },
     { icon: TvMinimalPlay, text: "Live Sessions" },
     { icon: FolderOpenDot, text: "15+ Practical Projects" },

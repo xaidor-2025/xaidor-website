@@ -9,7 +9,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
+    <section
+      id="home"
+      className="relative overflow-hidden h-screen flex items-start pt-20 md:items-center md:pt-0"
+    >
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50"></div>
 
@@ -27,46 +30,40 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-32 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-
           {/* Left Section */}
-          <div data-aos="fade-right" className="relative z-10">
+          <div
+            data-aos="fade-right"
+            className="relative z-10 order-2 md:order-1 text-center md:text-left"
+          >
             <div className="inline-block mb-4">
-              <span className="bg-[#FDE8E6] text-[#E04336] px-4 py-2 border border-[#FAC0BD] rounded-full text-lg font-medium">
-                Kerala's Most Affordable
+              <span className="bg-[#FDE8E6] text-[#E04336] px-4 py-1 border border-[#FAC0BD] rounded-full text-md md:text-lg font-medium">
+                Your Intelligent Partner
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              <span className="text-gray-900">Agentic AI</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-gray-900 text-[30px] md:text-[40px]">Empowering Students with</span>
               <br />
-              <span className="text-[#EC5D50]">Engineer Program</span>
+              <span className="text-[#EC5D50]">AI Skills for Tomorrow</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Learn AI · Build Projects · Get Certified
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#register"
-                className="bg-[#EC5D50] text-white px-8 py-3 rounded-lg hover:bg-[#E04336] font-medium transition"
-              >
-                Enroll Now
-              </a>
-              <a
-                href="#programs"
-                className="border-2 border-[#EC5D50] text-[#EC5D50] px-8 py-3 rounded-lg hover:bg-[#FEF3F2] font-medium transition"
-              >
-                View Programs
-              </a>
-            </div>
           </div>
 
           {/* Right big image */}
-          <div data-aos="zoom-in" className="relative flex justify-center z-10">
+          <div
+            data-aos="zoom-in"
+            className="relative flex justify-center z-10 order-1 md:order-2 scale-80 md:scale-100"
+          >
             <div className="relative">
               <div className="relative bg-white rounded-3xl p-12 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FAC0BD] to-pink-300 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-                <BotIcon className="relative w-48 h-48 text-[#EC5D50]" strokeWidth={1.5} />
+                <BotIcon
+                  className="relative w-48 h-48 text-[#EC5D50]"
+                  strokeWidth={1.5}
+                />
               </div>
               <div className="absolute top-0 left-0 w-full h-full">
                 <Brain className="absolute -top-6 -right-6 w-16 h-16 text-pink-500 bg-white rounded-2xl p-3 shadow-xl animate-float-1" />
@@ -75,7 +72,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
