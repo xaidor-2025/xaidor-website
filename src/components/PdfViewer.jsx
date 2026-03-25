@@ -3,7 +3,7 @@ import { useState } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString();
 
 export default function PDFViewer() {
@@ -18,7 +18,13 @@ export default function PDFViewer() {
       >
         {numPages &&
           Array.from(new Array(numPages), (_, i) => (
-            <Page key={i} pageNumber={i + 1} width={600} />
+            <Page
+              key={i}
+              pageNumber={i + 1}
+              width={screen.width - 400}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+            />
           ))}
       </Document>
     </div>

@@ -81,7 +81,7 @@ export default function Home() {
       <RegisterForm />
       <Contact />
       <Footer />
-      {/* <PDFViewer /> */}
+      <PDFViewer />
     </div>
   )
 }

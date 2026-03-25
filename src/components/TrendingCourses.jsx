@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight, Timer } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const courses = [
   {
@@ -7,36 +8,42 @@ const courses = [
     duration: "4 Months",
     type: "Online",
     image: "/assets/course-1.png",
+    slug: "agentic-ai-engineer-program",
   },
   {
     title: "Applied Python + Agentic AI Engineer Program",
     duration: "7 Months",
     type: "Online",
     image: "/assets/course-2.png",
+    slug: "applied-python-agentic-ai-engineer-program",
   },
   {
     title: "XAIDOR AI Career Accelerator Program",
     duration: "50 Hours",
     type: "Online | Offline",
     image: "/assets/course-3.png",
+    slug: "xaidor-ai-career-accelerator-program",
   },
   {
     title: "Vacation Special AI Course",
-    duration: "",
+    duration: "April, May",
     type: "Online",
     image: "/assets/course-4.png",
+    slug: "vacation-special-ai-course",
   },
   {
     title: "Agentic AI Engineer Program",
     duration: "4 Months",
     type: "Offline",
     image: "/assets/course-1.png",
+    slug: "agentic-ai-engineer-program-offline",
   },
   {
     title: "XAIDOR Power Learn (Intensive AI Add-on course)",
     duration: "60 Hours",
     type: "Online | Offline",
     image: "/assets/course-5.png",
+    slug: "xaidor-power-learn-intensive-ai-add-on-course",
   },
 ];
 
@@ -116,11 +123,15 @@ export default function TrendingCourses() {
                   {course.duration}
                 </p> */}
 
-                <p className="flex items-center gap-2 text-sm text-gray-600 mt-1"><Timer className="size-4" />{course.duration}</p>
-
-                <button className="mt-4 w-full py-2 rounded-lg font-medium text-white bg-[#EC5D50] hover:bg-[#E04336] transition">
-                  View Details
-                </button>
+                <p className="flex items-center gap-2 text-sm text-gray-600 mt-1">
+                  <Timer className="size-4" />
+                  {course.duration}
+                </p>
+                <Link to={`/courses/${course.slug}`}>
+                  <button className="mt-4 w-full cursor-pointer py-2 rounded-lg font-medium text-white bg-[#EC5D50] hover:bg-[#E04336] transition">
+                    View Details
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
