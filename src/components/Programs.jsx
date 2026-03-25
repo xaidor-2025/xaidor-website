@@ -32,7 +32,7 @@ const programs = [
       { text: "Resume Building" },
       { text: "100% Placement Assistance" },
     ],
-    online: false,
+    online: true,
   },
 ];
 
