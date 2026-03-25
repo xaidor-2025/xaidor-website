@@ -8,9 +8,9 @@ const Contact = () => {
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-6 text-gray-900">Get in Touch</h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-lg">
-              <a href="tel:7012818480" className="flex items-center gap-2 text-[#EC5D50] hover:text-[#E04336] font-medium transition-colors">
+              <a href="tel:9744036814" className="flex items-center gap-2 text-[#EC5D50] hover:text-[#E04336] font-medium transition-colors">
                 <Phone size={24} />
-                7012818480
+                9744036814
               </a>
               <a href="mailto:xaidor2025@gmail.com" className="flex items-center gap-2 text-[#EC5D50] hover:text-[#E04336] font-medium transition-colors">
                 <Mail size={24} />
