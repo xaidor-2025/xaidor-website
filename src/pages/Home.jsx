@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 import Features from '../components/Features';
 import TrendingCourses from '../components/TrendingCourses'
 import Certifications from '../components/Certifications'
-import PDFViewer from '../components/PdfViewer'
+import { Link } from 'react-router-dom'
 
 
 export default function Home() {
@@ -40,13 +40,13 @@ export default function Home() {
           >
             Home
           </a>
-          <a 
-            href="#about" 
+          <Link 
+            to="/about" 
             onClick={handleMenuClick}
             className='block px-4 py-3 text-gray-700 hover:bg-white hover:text-[#EC5D50] rounded-lg transition-colors duration-200 font-medium'
           >
             About
-          </a>
+          </Link>
           <a 
             href="#programs" 
             onClick={handleMenuClick}
@@ -79,9 +79,8 @@ export default function Home() {
       {/* <Programs /> */}
       <About />
       <RegisterForm />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
-      <PDFViewer />
     </div>
   )
 }

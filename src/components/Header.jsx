@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Header = ({mobileMenuOpen, setMobileMenuOpen}) => {
   return (
@@ -11,7 +12,7 @@ const Header = ({mobileMenuOpen, setMobileMenuOpen}) => {
           </div>
           <div className='hidden md:flex space-x-8 text-sm font-medium'>
             <a href="#" className='hover:text-[#EC5D50]'>Home</a>
-            <a href="#about" className='hover:text-[#EC5D50]'>About</a>
+            <Link to="/about" className='hover:text-[#EC5D50]'>About</Link>
             <a href="#programs" className='hover:text-[#EC5D50]'>Programs</a>
             <a href="#features" className='hover:text-[#EC5D50]'>Features</a>
             <a href="#register" className='hover:text-[#EC5D50]'>Register</a>

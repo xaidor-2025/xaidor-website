@@ -24,7 +24,7 @@ export default function CoursePage() {
             <Page
               key={i}
               pageNumber={i + 1}
-              width={screen.width - 100}
+              width={screen.width - 15}
               renderTextLayer={false}
               renderAnnotationLayer={false}
             />

@@ -1,18 +1,20 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { useState } from "react";
+import Footer from "./Footer";
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
 ).toString();
 
-export default function PDFViewer() {
+export default function PdfViewer() {
   const [numPages, setNumPages] = useState(null);
 
   return (
     <div className="flex flex-col items-center">
       <Document
-        file="/add-on.pdf"
+        file={`/about.pdf`}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         onLoadError={(err) => console.error("PDF error:", err)}
       >
@@ -27,6 +29,7 @@ export default function PDFViewer() {
             />
           ))}
       </Document>
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import AOS from 'aos';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CoursePage from './components/CoursePage';
+import VacationCourse from './pages/VacationCourse';
+import PdfViewer from './components/PdfViewer';
 
 
 export default function XaidorWebsite() {
@@ -13,6 +15,8 @@ export default function XaidorWebsite() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<PdfViewer />} />
+      <Route path="/courses/vacation-special-ai-course" element={<VacationCourse />} />
       <Route path="/courses/:slug" element={<CoursePage />} />
     </Routes>
   )
