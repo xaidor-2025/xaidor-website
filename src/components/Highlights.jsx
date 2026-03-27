@@ -18,7 +18,7 @@ export default function Highlights() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">

@@ -132,22 +132,22 @@ const RegisterForm = () => {
                 Select a program...
               </option>
               <option value="Agentic AI Engineer Program">
-                Agentic AI Engineer Program
+                Agentic AI Engineer Program Online
               </option>
               <option value="Applied Python + Agentic AI Engineer Program">
-                Applied Python + Agentic AI Engineer Program
+                Applied Python + Agentic AI Engineer Program Online
               </option>
               <option value="Agentic AI Engineer Program Offline">
                 Agentic AI Engineer Program Offline
               </option>
               <option value="XAIDOR AI Career Accelerator Program">
-                XAIDOR AI Career Accelerator Program
+                XAIDOR AI Career Accelerator Program Online or Offline
               </option>
               <option value="Vacation Special AI Course">
-                Vacation Special AI Course
+                Vacation Special AI Course Online
               </option>
               <option value="XAIDOR Power Learn (Intensive AI Add-on course)">
-                XAIDOR Power Learn (Intensive AI Add-on course)
+                XAIDOR Power Learn (Intensive AI Add-on course) Online or Offline
               </option>
             </select>
           </div>

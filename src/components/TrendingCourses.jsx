@@ -61,7 +61,7 @@ export default function TrendingCourses() {
   };
 
   return (
-    <section data-aos="fade-up" className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50">
+    <section data-aos="fade-up" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
@@ -99,7 +99,7 @@ export default function TrendingCourses() {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="relative min-w-[350px] max-w-[350px] bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
+                className="relative min-w-[350px] max-w-[350px] bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
               >
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#EC5D50] text-white px-5 py-1 rounded-full text-xs font-medium shadow">
                   {course.type}

@@ -38,12 +38,12 @@ export default function Hero() {
             className="relative z-10 order-2 md:order-1 text-center md:text-left"
           >
             <div className="inline-block mb-4">
-              <span className="bg-[#FDE8E6] text-[#E04336] px-4 py-1 border border-[#FAC0BD] rounded-full text-md md:text-lg font-medium">
+              <span className="bg-[#FDE8E6] text-[#E04336] font-['montserrat'] px-4 py-1 border border-[#FAC0BD] rounded-full text-md md:text-lg font-medium">
                 Your Intelligent Partner
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gray-900 text-[30px] md:text-[40px]">Empowering Students with</span>
+            <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold mb-6">
+              <span className="text-gray-900 text-[30px] md:text-[40px] lg:text-[45px]">Empowering Students with</span>
               <br />
               <span className="text-[#EC5D50]">AI Skills for Tomorrow</span>
             </h1>
@@ -55,15 +55,16 @@ export default function Hero() {
           {/* Right big image */}
           <div
             data-aos="zoom-in"
-            className="relative flex justify-center z-10 order-1 md:order-2 scale-80 md:scale-100"
+            className="relative flex justify-center z-10 order-1 md:order-2 scale-80 md:scale-100 lg:scale-130"
           >
             <div className="relative">
-              <div className="relative bg-white rounded-3xl p-12 shadow-2xl">
+              <div className="relative bg-white rounded-3xl p-6 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FAC0BD] to-pink-300 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-                <BotIcon
+                <img src="/hero.png" alt="Hero Image" className="relative w-54" />
+                {/* <BotIcon
                   className="relative w-48 h-48 text-[#EC5D50]"
                   strokeWidth={1.5}
-                />
+                /> */}
               </div>
               <div className="absolute top-0 left-0 w-full h-full">
                 <Brain className="absolute -top-6 -right-6 w-16 h-16 text-pink-500 bg-white rounded-2xl p-3 shadow-xl animate-float-1" />
