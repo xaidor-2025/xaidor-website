@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Send } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useEffect } from "react";
+import { Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    program: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    program: "",
+    message: "",
   });
 
   useEffect(() => {
@@ -23,21 +23,29 @@ const RegisterForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = 'service_4f4p2ff';
-    const adminTemplateId = 'template_cdwpqzt';
-    const userTemplateId = 'template_rjqo3bk';
-    const publicKey = 'RXIk04ZjV5E4GEWxf';
+    const serviceId = "service_4f4p2ff";
+    const adminTemplateId = "template_cdwpqzt";
+    const userTemplateId = "template_rjqo3bk";
+    const publicKey = "RXIk04ZjV5E4GEWxf";
 
     emailjs
       .send(serviceId, adminTemplateId, formData, publicKey)
       .then(() => emailjs.send(serviceId, userTemplateId, formData, publicKey))
       .then(() => {
-        alert('🎉 Thank you for registering! A confirmation email has been sent to you.');
-        setFormData({ name: '', email: '', phone: '', program: '', message: '' });
+        alert(
+          "🎉 Thank you for registering! A confirmation email has been sent to you.",
+        );
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          program: "",
+          message: "",
+        });
       })
       .catch((error) => {
-        console.error('❌ Error sending email:', error);
-        alert('Something went wrong, please try again.');
+        console.error("❌ Error sending email:", error);
+        alert("Something went wrong, please try again.");
       });
   };
 
@@ -55,7 +63,8 @@ const RegisterForm = () => {
             Register Now
           </h2>
           <p className="text-gray-600">
-            Start your AI journey today. Fill out the form below and we'll get in touch.
+            Start your AI journey today. Fill out the form below and we'll get
+            in touch.
           </p>
         </div>
 
@@ -122,11 +131,23 @@ const RegisterForm = () => {
               <option value="" disabled>
                 Select a program...
               </option>
-              <option value="Agentic AI Engineer Program (₹14,999)">
-                Agentic AI Engineer Program (₹14,999)
+              <option value="Agentic AI Engineer Program">
+                Agentic AI Engineer Program
               </option>
-              <option value="Applied Python + Agentic AI Engineer Program (₹19,999)">
-                Applied Python + Agentic AI Engineer Program (₹19,999)
+              <option value="Applied Python + Agentic AI Engineer Program">
+                Applied Python + Agentic AI Engineer Program
+              </option>
+              <option value="Agentic AI Engineer Program Offline">
+                Agentic AI Engineer Program Offline
+              </option>
+              <option value="XAIDOR AI Career Accelerator Program">
+                XAIDOR AI Career Accelerator Program
+              </option>
+              <option value="Vacation Special AI Course">
+                Vacation Special AI Course
+              </option>
+              <option value="XAIDOR Power Learn (Intensive AI Add-on course)">
+                XAIDOR Power Learn (Intensive AI Add-on course)
               </option>
             </select>
           </div>

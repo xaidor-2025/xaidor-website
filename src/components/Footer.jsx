@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <img
               draggable="false"
-              src="./assets/logo-full-png.png"
+              src="https://ik.imagekit.io/xaidor/logo-full-png.png"
               onClick={() => window.location.reload()}
               className="w-45 cursor-pointer select-none"
             />

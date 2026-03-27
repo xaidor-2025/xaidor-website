@@ -68,52 +68,6 @@ function Counter({ end, suffix = "" }) {
   );
 }
 
-/* ── cert infinite scroller ─────────────────────────────────────── */
-const softwares = [
-  { name: "UK ACCREDITATION CERTIFICATION LIMITED", logo: "https://ik.imagekit.io/xaidor/ukac.jpeg" },
-  {
-    name: "INTERNATIONAL QUALITY CERTIFICATION SERVICES",
-    logo: "https://ik.imagekit.io/xaidor/iqcs.jpeg",
-  },
-  { name: "MICRO, SMALL & MEDIUM ENTERPRISES", logo: "https://ik.imagekit.io/xaidor/msme.jpeg" },
-  { name: "ISO 9001:2015", logo: "https://ik.imagekit.io/xaidor/iso.jpeg" },
-];
-
-function CertScroller() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const c = ref.current;
-    if (!c) return;
-    let id;
-    const step = () => {
-      c.scrollLeft += 1;
-      if (c.scrollLeft >= c.scrollWidth / 2) c.scrollLeft = 0;
-      id = requestAnimationFrame(step);
-    };
-    id = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(id);
-  }, []);
-  return (
-    <div ref={ref} className="flex gap-5 overflow-x-hidden whitespace-nowrap">
-      {[...softwares, ...softwares].map((item, i) => (
-        <div
-          key={i}
-          className="flex flex-col items-center gap-3 min-w-fit px-8 py-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-        >
-          <img
-            src={item.logo}
-            alt={item.name}
-            className="h-20 w-auto object-contain"
-          />
-          <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
-            {item.name}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 /* ── data ───────────────────────────────────────────────────────── */
 const curriculum = [
   { icon: <Zap size={18} />, label: "ChatGPT & Advanced AI Tools" },

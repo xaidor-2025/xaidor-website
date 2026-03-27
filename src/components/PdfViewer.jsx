@@ -22,7 +22,7 @@ export default function PdfViewer() {
             <Page
               key={i}
               pageNumber={i + 1}
-              width={screen.width - 400}
+              width={screen.width - 25}
               renderTextLayer={false}
               renderAnnotationLayer={false}
             />
