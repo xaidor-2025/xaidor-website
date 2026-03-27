@@ -21,7 +21,7 @@ const About = () => {
                         <div className="w-full h-full bg-gradient-to-br from-[#FAC0BD] to-[#F89894] flex items-center justify-center">
                             <div className="text-center">
                                 <img
-                                    src="https://ik.imagekit.io/shadick/moosa_ck.png"
+                                    src="https://ik.imagekit.io/xaidor/moosa_ck.png"
                                     className="max-w-[280px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] w-full mx-auto"
                                 />
                             </div>

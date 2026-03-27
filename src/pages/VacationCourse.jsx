@@ -70,13 +70,13 @@ function Counter({ end, suffix = "" }) {
 
 /* ── cert infinite scroller ─────────────────────────────────────── */
 const softwares = [
-  { name: "UK ACCREDITATION CERTIFICATION LIMITED", logo: "/assets/ukac.jpeg" },
+  { name: "UK ACCREDITATION CERTIFICATION LIMITED", logo: "https://ik.imagekit.io/xaidor/ukac.jpeg" },
   {
     name: "INTERNATIONAL QUALITY CERTIFICATION SERVICES",
-    logo: "/assets/iqcs.jpeg",
+    logo: "https://ik.imagekit.io/xaidor/iqcs.jpeg",
   },
-  { name: "MICRO, SMALL & MEDIUM ENTERPRISES", logo: "/assets/msme.jpeg" },
-  { name: "ISO 9001:2015", logo: "/assets/iso.jpeg" },
+  { name: "MICRO, SMALL & MEDIUM ENTERPRISES", logo: "https://ik.imagekit.io/xaidor/msme.jpeg" },
+  { name: "ISO 9001:2015", logo: "https://ik.imagekit.io/xaidor/iso.jpeg" },
 ];
 
 function CertScroller() {

@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
 const softwares = [
-  { name: "UK ACKREDITERING CERTIFICATION LIMITED", logo: "/assets/ukac.jpeg" },
-  { name: "INTERNATIONAL QUALITY CERTIFICATION SERVICES", logo: "/assets/iqcs.jpeg" },
-  { name: "MICRO, SMALL & MEDIUM ENTERPRISES", logo: "/assets/msme.jpeg" },
-  { name: "ISO 9001:2015", logo: "/assets/iso.jpeg" },
+  { name: "UK ACKREDITERING CERTIFICATION LIMITED", logo: "https://ik.imagekit.io/xaidor/ukac.jpeg" },
+  { name: "INTERNATIONAL QUALITY CERTIFICATION SERVICES", logo: "https://ik.imagekit.io/xaidor/iqcs.jpeg" },
+  { name: "MICRO, SMALL & MEDIUM ENTERPRISES", logo: "https://ik.imagekit.io/xaidor/msme.jpeg" },
+  { name: "ISO 9001:2015", logo: "https://ik.imagekit.io/xaidor/iso.jpeg" },
 ];
 
 export default function Certifications() {
