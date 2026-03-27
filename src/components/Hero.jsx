@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="relative">
               <div className="relative bg-white rounded-3xl p-6 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FAC0BD] to-pink-300 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-                <img src="/hero.png" alt="Hero Image" className="relative w-54" />
+                <img src="https://ik.imagekit.io/xaidor/hero.png" alt="Hero Image" className="relative w-54" />
                 {/* <BotIcon
                   className="relative w-48 h-48 text-[#EC5D50]"
                   strokeWidth={1.5}
