@@ -39,7 +39,7 @@ const About = () => {
                             through hands-on learning and real-world projects.
                         </p>
                         <div className="flex gap-4">
-                            <a href="tel:7012818480" className="text-[#EC5D50] hover:text-[#E04336] font-medium">
+                            <a href="tel:9744036814" className="text-[#EC5D50] hover:text-[#E04336] font-medium">
                                 Contact →
                             </a>
                         </div>
