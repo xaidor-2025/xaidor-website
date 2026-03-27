@@ -17,12 +17,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           {/* LOGO + ABOUT */}
           <div>
-            <a href="/"><h2 className="text-xl font-bold text-gray-900 mb-3">XAIDOR</h2></a>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Building future-ready AI professionals with practical,
-              industry-focused learning experiences.
-            </p>
-
+            <img
+              draggable="false"
+              src="./assets/logo-full-png.png"
+              onClick={() => window.location.reload()}
+              className="w-45 cursor-pointer select-none"
+            />
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Xaidor. All rights reserved.
             </p>

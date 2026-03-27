@@ -1,6 +1,7 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -30,6 +31,8 @@ export default function CoursePage() {
             />
           ))}
       </Document>
+
+      <Footer />
     </div>
   );
 }

@@ -29,7 +29,7 @@ const About = () => {
                     </div>
 
                     {/* Right text animation */}
-                    <div data-aos="fade-left">
+                    <div data-aos="fade-top">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Meet the Founder</h2>
                         <h3 className="text-2xl font-semibold mb-2 text-[#EC5D50]">Moosa CK</h3>
                         <p className="text-lg text-gray-600 mb-6">Founder and CEO</p>

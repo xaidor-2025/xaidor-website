@@ -74,9 +74,8 @@ export default function Home() {
 
       <Hero />
       <Certifications />
-      <Features />
+      <Features />  
       <TrendingCourses />
-      {/* <Programs /> */}
       <About />
       <RegisterForm />
       {/* <Contact /> */}

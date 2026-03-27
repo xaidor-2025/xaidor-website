@@ -61,7 +61,7 @@ export default function TrendingCourses() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50">
+    <section data-aos="fade-up" className="py-20 bg-gradient-to-br from-[#FEF3F2] via-red-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
@@ -78,7 +78,7 @@ export default function TrendingCourses() {
           {/* Left Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:shadow-lg"
+            className="hidden md:flex absolute left-2 md:-left-8 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:shadow-lg"
           >
             <ChevronLeft />
           </button>
@@ -86,7 +86,7 @@ export default function TrendingCourses() {
           {/* Right Button */}
           <button
             onClick={() => scroll("right")}
-            className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:shadow-lg"
+            className="hidden md:flex absolute right-2 md:-right-8 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full hover:shadow-lg"
           >
             <ChevronRight />
           </button>
