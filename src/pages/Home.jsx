@@ -11,6 +11,7 @@ import Features from '../components/Features';
 import TrendingCourses from '../components/TrendingCourses'
 import Certifications from '../components/Certifications'
 import { Link } from 'react-router-dom'
+import Highlights from '../components/Highlights'
 
 
 export default function Home() {
@@ -76,6 +77,7 @@ export default function Home() {
       <Certifications />
       <Features />  
       <TrendingCourses />
+      <Highlights />
       <About />
       <RegisterForm />
       {/* <Contact /> */}

@@ -7,6 +7,7 @@ import CoursePage from "./components/CoursePage";
 import VacationCourse from "./pages/VacationCourse";
 import PdfViewer from "./components/PdfViewer";
 import ScrollToTop from "./components/ScrollToTop";
+import Highlights from "./components/Highlights";
 
 export default function XaidorWebsite() {
   useEffect(() => {
