@@ -2,7 +2,6 @@ import { Document, Page, pdfjs } from "react-pdf";
 import { useState } from "react";
 import Footer from "./Footer";
 
-
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
@@ -14,7 +13,7 @@ export default function PdfViewer() {
   return (
     <div className="flex flex-col items-center">
       <Document
-        file={`/about.pdf`}
+        file={`https://ik.imagekit.io/xaidor/about.pdf`}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         onLoadError={(err) => console.error("PDF error:", err)}
       >

@@ -16,7 +16,7 @@ export default function CoursePage() {
   return (
     <div className="flex flex-col items-center">
       <Document
-        file={`/${slug}.pdf`}
+        file={`https://ik.imagekit.io/xaidor//${slug}.pdf`}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         onLoadError={(err) => console.error("PDF error:", err)}
       >
